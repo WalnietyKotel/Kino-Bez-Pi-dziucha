@@ -4,6 +4,7 @@
     padding: 0;
     margin:0 ;
 }
+
 img{
     border-radius: 10px;
 }
@@ -21,6 +22,7 @@ header{
     justify-content: center;
     align-items: center;
 }
+
 header > p{
     font-size: 1vw;
 }
@@ -45,7 +47,7 @@ h1{
 .log_in{
     display: flex;
     flex-basis: 10%;
-    background-color: #CC3AFF;
+    background-color: #4503FF;
 }
 
 header > article{
@@ -74,38 +76,7 @@ main{
     justify-content: center;
     align-items: center;
     height: 100%;
-    background-image: url('zdjecia/Różowe\ Niebieskie\ Zielone\ Gradient\ Kolor\ i\ Styl\ Tło\ Wideo.jpg');
-}
-
-.marvel{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 53%;
-    background-color: white;
-    margin-right: 20rem;
-    margin-top: 1rem;
-    border-radius: 15px;
-    height: auto;
-}
-
-.star_wars{
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 53%;
-    background-color: white;
-    margin-left: 20rem;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    border-radius: 15px;
-}
-.m , .sw{
-    display: flex;
-    flex-basis: 20%;
-    background-color: #5746BB;
-    border-radius: 15px;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem;
+    background-image: url('/zdjecia/Różowe\ Niebieskie\ Zielone\ Gradient\ Kolor\ i\ Styl\ Tło\ Wideo.jpg');
 }
 
 .zdj{
@@ -121,11 +92,7 @@ main{
 footer{
     display: flex;
     background-color: #7616C2;
-    height:8vh;
+    height: 8vh;
     align-items: center;
     justify-content: space-evenly;
 }
-
-
-/* ====================================== */
-
