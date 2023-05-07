@@ -1,0 +1,90 @@
+*{
+    font-size: 1.3vw;
+    box-sizing: border-box;
+    padding: 0;
+    margin:0 ;
+}
+
+img{
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ================================================== */
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #7616C2;
+
+}
+
+.logo_kitek{
+    display: flex;
+    flex-basis: 10%;
+    height: 12vh;
+    align-self: center;
+    margin: .5rem;
+}
+
+/* ================================================== */
+
+main{
+    display: flex;
+    flex-basis: 100%;   
+    flex-wrap: wrap;
+    height: 100%;
+    background-image: url('Różowe\ Niebieskie\ Zielone\ Gradient\ Kolor\ i\ Styl\ Tło\ Wideo.jpg');
+    background-size: cover;
+}
+
+h2{
+    flex-basis: 100%;
+    background-color: #8D29DB;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 4vw;
+    color: aliceblue;
+}
+
+.opis{
+    flex-basis: 70%;
+    background-color: #8D29DB;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 15px;
+}
+
+.bilet{
+    flex-basis: 20%;
+    background-color: #8D29DB;
+    padding: 3rem;
+    margin: 1rem;
+    border-radius: 15px;
+}
+
+img{
+    flex-basis: 20%;
+    margin: 1rem;
+}
+
+/* ============================== */
+
+footer{
+    display: flex;
+    background-color: #7616C2;
+    height:8vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* ====================================== */
+
