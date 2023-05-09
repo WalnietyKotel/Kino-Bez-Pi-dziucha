@@ -135,6 +135,7 @@ main{
 
 footer{
     display: flex;
+    color: white;
     background-color: #7616C2;
     height:10vh;
     align-items: center;

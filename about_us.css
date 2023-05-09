@@ -1,5 +1,4 @@
 *{
-    font-size: 1.3vw;
     box-sizing: border-box;
     padding: 0;
     margin:0 ;
@@ -7,62 +6,74 @@
 img{
     border-radius: 10px;
 }
-a{
-    text-decoration: none;
-    color: black;
-}
+
 /* =============================================== */
 header{
     display: flex;
-    flex-basis: 100%;
+    width: 100vw;
+    height: 10vh;
     background-color: #7616C2;
-    flex-wrap: wrap;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-}
-header > p{
-    font-size: 1vw;
+    font-size: 20px;
 }
 
 h1{
-    display: flex;
-    flex-basis: 50%;
+    flex-basis: 20%;
+    color: white;
 }
 
-.about_us{
+ul {
+    margin-left: 10vw;
+    padding: 1.5vh;
     display: flex;
-    flex-basis: 10%;
-    background-color: #4503FF;
+    flex-direction: row;
+    gap: 10vw;
+    justify-content: flex-end;
+    justify-content: space-around;
 }
 
-.sign_in{
-    display: flex;
-    flex-basis: 10%;
-    background-color: #CC3AFF;
+li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
 }
 
-.log_in{
-    display: flex;
-    flex-basis: 10%;
-    background-color: #CC3AFF;
-}
-
-header > article{
+a {
+    display: block;
+    display: grid;
+    width: 12vw;
+    height: 6vh;
+    border: none;
     justify-content: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    height: 7vh;
-    align-items: center;
-    border-radius: 10px;
+    place-content: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 18px;
+    background-color: #7616C2;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .logo_kitek{
-    display: flex;
-    flex-basis: 10%;
     height: 12vh;
-    align-self: center;
     margin: .5rem;
+    flex-basis: 10%;
 }
 
 /* ================================================== */
@@ -72,34 +83,38 @@ main{
     flex-basis: 100%;   
     flex-wrap: wrap;
     justify-content: center;
+    height: auto;
     align-items: center;
-    height: 100%;
-    background-image: url('zdjecia/Różowe\ Niebieskie\ Zielone\ Gradient\ Kolor\ i\ Styl\ Tło\ Wideo.jpg');
+    height: 80vh;
+    z-index: -1;
+    background-image: url(Różowe\ Niebieskie\ Zielone\ Gradient\ Kolor\ i\ Styl\ Tło\ Wideo.jpg);
     background-size: cover;
 }
 
-.about{
-    text-align: center;
-    background-color: #8D29DB;
-    height: 28.7vw;
-    width: 60%;
-    margin: 4rem;
-    padding: 2rem;
-    border-radius: 25px;
+article {
+    border-radius: 20px;
+    background-color: #7616C2;
+    flex-basis: 80%;
+    height: auto;
+    padding: 2em;
+    color: white;
 }
-.about > p{
-    font-size: 2vw;
+
+h2{
+    text-align: center;
 }
 
 /* ============================== */
 
 footer{
     display: flex;
+    color: white;
     background-color: #7616C2;
-    height: 5rem;
+    height:10vh;
     align-items: center;
     justify-content: space-evenly;
 }
 
 
 /* ====================================== */
+
