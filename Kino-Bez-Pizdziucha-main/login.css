@@ -3,6 +3,7 @@
     padding: 0;
     margin:0 ;
     font-size: 1.3vw;
+  color: white;
 }
 img{
     border-radius: 10px;
@@ -178,6 +179,7 @@ footer{
     padding: 10px;
     margin-top: 1rem;
     border-radius: 10px;
+    color: white;
   }
   #contactForm button:hover {
     background: #09c;

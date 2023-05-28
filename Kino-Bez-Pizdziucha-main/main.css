@@ -3,6 +3,7 @@
     padding: 0;
     margin:0 ;
     font-size: 1.3vw;
+    color: white;
 }
 img{
     border-radius: 10px;
@@ -93,7 +94,12 @@ main{
     background-image: url(Różowe\ Niebieskie\ Zielone\ Gradient\ Kolor\ i\ Styl\ Tło\ Wideo.jpg);
     background-size: cover;
 }
-
+main > section > a {
+    transition: all .2s ease-in-out;
+}
+main > section > a:hover {
+    transform: scale(1.05);
+}
 .marvel{
     display: flex;
     flex-wrap: wrap;
