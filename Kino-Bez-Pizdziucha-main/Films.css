@@ -1,0 +1,152 @@
+*{
+    font-size: 1.3vw;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('Różowe\ Niebieskie\ Zielone\ Gradient\ Kolor\ i\ Styl\ Tło\ Wideo.jpg');
+    padding: 0;
+    margin:0 ;
+}
+
+img{
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ================================================== */
+
+header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: #7616C2;
+    align-items: center;
+}
+
+h1{
+    flex-basis: 20%;
+    color: white;
+    align-self: center;
+    margin-left: 1rem;
+}
+
+ul {
+    margin-left: 10vw;
+    padding: 1.5vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    justify-content: flex-end;
+    justify-content: space-around;
+}
+
+li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+
+a {
+    display: block;
+    display: grid;
+    width: 12vw;
+    height: 6vh;
+    border: none;
+    justify-content: center;
+    place-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 18px;
+    background-color: #840be7;
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.logo_kitek{
+    height: 12vh;
+    margin: .5rem;
+    margin-left: 1rem;
+    flex-basis: 3%;
+}
+
+/* ================================================== */
+
+main{
+    display: flex;
+    flex-basis: 90%;   
+    flex-wrap: wrap;
+}
+
+h2{
+    flex-basis: 100%;
+    height: auto;
+    background-color: #8D29DB;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 2vw;
+    color: aliceblue;
+}
+
+.opis{
+    flex-basis: 83%;
+    background-color: #8D29DB;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 15px;
+}
+
+.bilet{
+    flex-basis: 10%;
+    background-color: #8D29DB;
+    padding: 3rem;
+    margin: 1rem;
+    border-radius: 15px;
+}
+
+aside{
+    display: flex;
+    width: 50%;
+}
+
+#im1{
+    display: flex;
+    margin: 1rem;
+    height: 100%;
+}
+
+/* ============================== */
+
+footer{
+    display: flex;
+    background-color: #7616C2;
+    height:8vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* ====================================== */
+
