@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kino Bez Pizdziucha</title>
+    <link rel="stylesheet" href="public/flickity.css">
+    <link rel="stylesheet" href="public/main.css">
+    <link rel="stylesheet" href="public/czcionka.css">
+    <script src="public/flickity.js" defer></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="public/kitek pokerface.png">
+</head>
+<body>
+    <header>
+        <img src="public/kitek pokerface.png" alt="kitek logo" class="logo_kitek">
+        <h1>Kino Bez Piździucha</h1>
+        <nav>
+            <ul>
+                <li><a href="/" class="a">Repertuar</a></li>
+                <li><a href="/about_us" class="a">About Us</a></li>
+                <li><a style="text-align: center" href="/login" class="a">Login<br><%=session%></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <div>
+        <div class="carousel">
+            <ul class="slides">
+                <% let i = 0;filmy.forEach(filmy=>{if (filmy.rec===true && i<3){i+=1;%>
+                <input type="radio" name="radio-buttons" id="img-<%=i%>"/>
+                <li class="slide-container">
+                    <div class="slide-image" id="i<%=i%>">
+                        <img src="<%=filmy.imgScene%>" alt="<%=filmy.title%>" >
+                        <h1 class="cP">Polecane:</h1>
+                        <h2 class="cH"><%=filmy.title%></h2>
+                        <p class="cD"><%=filmy.desc%></p>
+                    </div>
+                    <div class="carousel-controls">
+                        <label  class="prev-slide" id="imgp<%=i%>">
+                            <span>&lsaquo;</span>
+                        </label>
+                        <label  class="next-slide" id="imgn<%=i%>">
+                            <span>&rsaquo;</span>
+                        </label>
+                    </div>
+                </li>
+                <%}})%><script>document.getElementById('img-1').checked=true
+                    document.getElementById('imgp1').setAttribute("for",'img-3')
+                    document.getElementById('imgn1').setAttribute("for",'img-2')
+                    document.getElementById('imgp2').setAttribute("for",'img-1')
+                    document.getElementById('imgn2').setAttribute("for",'img-3')
+                    document.getElementById('imgp3').setAttribute("for",'img-2')
+                    document.getElementById('imgn3').setAttribute("for",'img-1')
+                </script>
+<!--                <input type="radio" name="radio-buttons" id="img-2" />-->
+<!--                <li class="slide-container">-->
+<!--                    <div class="slide-image" id="i2">-->
+
+<!--                    </div>-->
+<!--                    <div class="carousel-controls">-->
+<!--                        <label for="img-1" class="prev-slide">-->
+<!--                            <span>&lsaquo;</span>-->
+<!--                        </label>-->
+<!--                        <label for="img-3" class="next-slide">-->
+<!--                            <span>&rsaquo;</span>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <input type="radio" name="radio-buttons" id="img-3" />-->
+<!--                <li class="slide-container">-->
+<!--                    <div class="slide-image" id="i3">-->
+
+<!--                    </div>-->
+<!--                    <div class="carousel-controls">-->
+<!--                        <label for="img-2" class="prev-slide">-->
+<!--                            <span>&lsaquo;</span>-->
+<!--                        </label>-->
+<!--                        <label for="img-1" class="next-slide">-->
+<!--                            <span>&rsaquo;</span>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </li>-->
+                <div class="carousel-dots">
+                    <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+                    <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+                    <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+        <h1 id="kP">Kup bilet:</h1>
+            <div class="row">
+                <div class="header">
+                    <h3 class="title"></h3>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="container">
+                    <button class="handle left-handle">
+                        <div class="text">&#8249;</div>
+                    </button>
+                    <div class="slider">
+                        <%filmy.forEach((filmy)=>{%>
+                        <img alt="<%=filmy.title%>" src="<%=filmy.img%>" class="img" onclick="window.location.href='/film/:<%=filmy.title%>'">
+
+                        <%})%>
+                    </div>
+                    <button class="handle right-handle">
+                        <div class="text">&#8250;</div>
+                    </button>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <p>Kino Bez Piździucha</p>
+        <p>&copy; WalnietyKotel i Sticzx Coorporated</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet" href="public/czcionka.css">
+    <link rel="stylesheet" href="public/login.css">
+    <!-- <link rel="stylesheet" href="logowanie.css"> -->
+
+</head>
+<body>
+<header>
+    <img src="public/kitek pokerface.png" alt="kitek logo" class="logo_kitek">
+    <h1>Kino Bez Piździucha</h1>
+    <nav>
+        <ul>
+            <li><a href="/" class="a">Repertuar</a></li>
+            <li><a href="/about_us" class="a">About Us</a></li>
+            <li><a style="text-align: center" href="/login" class="a">Login<br><%=session%></a></li>
+        </ul>
+    </nav>
+</header>
+    <main>
+        
+            <!-- <div class="hero">
+                <div class="box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()" href="kino.html">Log in</button>
+                        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+                    </div>
+                    <form id="login" class="input-group">
+                        <input type="text" class="input-field" placeholder="Username" required>
+                        <input type="text" class="input-field" placeholder="Password" required>
+                        <input type="checkbox" class="check-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-btn">Log In</button>
+                    </form>
+                    <form id="register" class="input-group">
+                        <input type="text" class="input-field" placeholder="Username" required>
+                        <input type="email" class="input-field" placeholder="E-mail" required>
+                        <input type="text" class="input-field" placeholder="Password" required>
+                        <input type="checkbox" class="check-box" required><span>I agree to the terms & conditions</span>
+                        <button type="submit" class="submit-btn">Register</button>
+                    </form>
+                </div>
+            </div>   -->
+              
+            <div class="container">  
+                <form action="/register" id="contactForm" method="post">
+                    <h2>Zarejestruj się!</h2>
+
+                    <input placeholder="Username" type="text" name="username" tabindex="1" required autofocus>
+                    <input placeholder="Password" type="password" name="password" tabindex="2">
+                    <input placeholder="Email Address" type="email" name="email" tabindex="3" required>
+                    <input value="Zarejestruj" name="submitBtn" id="contact-submit" type="submit" data-submit="...Sending">
+                    <a id="reg"  href="/login">Masz już konto? Zaloguj się</a>
+                </form>
+            </div>
+
+    </main>
+    <footer>
+        <p>Kino Bez Piździucha</p>
+        <p>&copy;WalnietyKotel i Sticzx Coorporated</p>
+    </footer>
+</body>
+</html>

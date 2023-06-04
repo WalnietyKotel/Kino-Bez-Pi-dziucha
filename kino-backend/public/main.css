@@ -1,0 +1,179 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0 ;
+    font-size: 1.3vw;
+    color: white;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* =============================================== */
+body header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    background-color: #7616C2;
+
+}
+
+header h1{
+    flex-basis: 20%;
+    margin-left: 1rem;
+    color: white;
+    align-self: center;
+}
+
+nav ul {
+    margin-left: 10vw;
+    padding: 1.5vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+
+.a{
+    display: grid;
+    width: 12vw;
+    height: 6vh;
+    border: none;
+    justify-content: center;
+    place-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 1.5vw;
+    background-color: #840be7;
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.logo_kitek{
+    height: 12vh;
+    margin: .5rem;
+    margin-left: 1rem;
+    flex-basis: 3%;
+    border-radius: 1vw;
+}
+
+/* ================================================== */
+
+.cH {
+    text-align: left;
+    z-index: 1000;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 3vw;
+    margin: 1vw;
+    font-size: 4vw;
+    width: 40%;
+
+}
+
+.cD {
+    text-align: left;
+    z-index: 1000;
+    position: absolute;
+    left: 0;
+    top: 8vw;
+    margin: 1vw;
+    width: 30%;
+
+    font-size: 1.5vw;
+
+
+}
+
+.cP{
+    text-align: left;
+    z-index: 1000;
+    color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 1vw;
+    margin-top: 0.1vw;
+    font-size: 4vw;
+    width: 40%;
+
+}
+/*.gallery {*/
+/*    background: #EEE;*/
+/*}*/
+
+/*.gallery-cell {*/
+/*    width: 66%;*/
+/*    height: 16vw;*/
+/*    margin-right: 0.7vw;*/
+/*    background: #8C8;*/
+/*}*/
+
+/*.gallery-cell:before {*/
+/*    display: block;*/
+/*    text-align: center;*/
+/*    line-height: 13vw;*/
+/*    font-size: 6vw;*/
+/*    color: white;*/
+/*}*/
+
+/*#img1{*/
+/*    background-image: url('public/zdjecia/im1.jpg');*/
+/*    background-size: cover;*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: center center;*/
+/*}*/
+
+/* ============================== */
+
+main {
+    background-image: url('gradient.jpg');
+    width: 100%;
+}
+
+#kP{
+  margin-left: 1vw;
+    margin-top: 1vw;
+    font-size: 4vw;
+}
+
+/* ============================== */
+
+footer{
+    width: 100%;
+    display: flex;
+    color: white;
+    background-color: #7616C2;
+    height:10vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* ====================================== */
+
