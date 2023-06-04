@@ -1,0 +1,18 @@
+<form action="./reservation/seat" method="POST" class="booking">
+
+    <input type="text" value="<%-sea[0]._id%>" name="seanse" style="display: none";>
+
+    <p><%-sea[1]%></p>
+    <p>
+        <%-sea[0].date%>
+        <br>
+        <%if(sea[0].d3 == true){%>
+            3D
+        <%}else{%>
+            2D
+        <%}%>
+        
+        <%-sea[0].language%>
+    </p>
+    <button>book a seat</button>
+</form>

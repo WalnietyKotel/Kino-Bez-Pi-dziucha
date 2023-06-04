@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    BOOK A SEAT
+    <br>
+    <br>
+    Total Seats: <%=totalSeats%>
+    <br>
+    Taken Seats: <% takenSeats.forEach(element => { %>
+        <%=element%>,
+    <% }) %>
+    <form action="seat/final" method="POST">
+        <label for="seat">Book seat number: </label>
+        <input type="number" step="1" min="1" max="<%-totalSeats%>" name="seat">
+        <input type="text" name="seanse" value="<%-seanse%>" style="display: none;">
+        <br>
+        <button>BOOK</button>
+    </form>
+</body>
+</html>

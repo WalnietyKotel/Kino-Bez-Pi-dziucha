@@ -1,0 +1,179 @@
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+
+body {
+    font-family: '8BIT WONDER', sans-serif;
+}
+
+header {
+    height: 1000px;
+
+    background-image: url(../img/mainBackground.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#coolbit {
+    height: 200px;
+    width: 1700px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* everything above this comment was added mainly because of the fact that without this code the animation of coolbit would make header overlay main section a bit and it was driving me crazy(delete this code and scroll a bit down to see what Im trying to say)*/
+    animation-name: bambikBojowy;
+    animation-duration: 20s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bambikBojowy {
+    0% {
+        font-size: 100%;
+        text-shadow: 2px 2px yellow;
+        transform: rotate(-5deg);
+    }
+
+    25% {
+        font-size: 110%;
+        transform: rotate(5deg);
+    }
+
+    50% {
+        font-size: 100%;
+        text-shadow: 2px 2px blue;
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        font-size: 110%;
+        text-shadow: 2px 2px rgb(17, 174, 17);
+        transform: rotate(5deg);
+    }
+
+    100% {
+        font-size: 100%;
+        text-shadow: 2px 2px yellow;
+        transform: rotate(-5deg);
+    }
+}
+
+/*=====================================================*/
+/* list and a atribute stuff v */
+
+ul {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a {
+    text-decoration: none;
+    padding: 1em;
+
+    color: yellow;
+    -webkit-text-stroke: 2px black;
+    font-size: 20px;
+}
+
+a:hover {
+    animation-name: coolstuff;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite;
+
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.modal-content {
+
+    text-decoration: none;
+    padding: 1em;
+
+    color: yellow;
+    -webkit-text-stroke: 2px black;
+    font-size: 20px;
+}
+
+@keyframes coolstuff {
+    0% {
+        font-size: 20px;
+        transform: rotate(0deg);
+        text-shadow: 2px 2px rgb(255, 0, 0);
+    }
+
+    25% {
+        font-size: 25px;
+        transform: rotate(15deg);
+        text-shadow: 2px 2px yellow;
+    }
+
+    50% {
+        font-size: 20px;
+        transform: rotate(0deg);
+        text-shadow: 2px 2px red;
+    }
+
+    75% {
+        font-size: 25px;
+        transform: rotate(-15deg);
+        text-shadow: 2px 2px yellow;
+    }
+
+    100% {
+        font-size: 20px;
+        transform: rotate(0deg);
+        text-shadow: 2px 2px red;
+    }
+}
+
+/*========================================================*/
+
+main {
+    height: 2000px;
+
+    background-color: yellow;
+}
+
+footer {
+    background-color: red;
+}
+
+h3{
+    font-size: 2rem;
+    -webkit-text-stroke: 1px gold;
+}

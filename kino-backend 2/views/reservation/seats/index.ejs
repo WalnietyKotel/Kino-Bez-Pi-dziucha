@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <title>Wybierz miejsce</title>
+    <link rel="stylesheet" href="/css/wybieranie.css">
+    <script src="/js/wybieranie.js" defer></script>
+</head>
+<body>
+    <main>
+
+        <div id="takenList" style="display: none">
+            <%=takenSeats%>
+        </div>
+
+        <div class="screen"></div>
+
+        <% for(var i=1; i*10 < totalSeats; i++) {%>
+            <%-include(`row.ejs`, {number: i})%>
+         <% } %>
+
+         <%if(totalSeats%10 != 0){%>
+            <%-include(`last.ejs`, {number : totalSeats})%>
+        <%}%>
+        
+
+    </main>
+    <footer>
+        <p>KOSZT BILETOW WYNOSI AKTUALNIE: $<span id="Price">0</span></p>
+        <form action="seat/final" method="POST">
+            <input id="input" type="text" step="1" min="1" max="<%-totalSeats%>" name="seat" style="display: none;">
+            <input id="price" type="text" name="price" style="display: none;">
+            <input type="text" name="seanse" value="<%-seanse%>" style="display: none;">
+            <br>
+            <button>BOOK</button>
+        </form>
+    </footer>
+</body>
+</html>

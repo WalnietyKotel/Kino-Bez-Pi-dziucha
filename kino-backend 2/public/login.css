@@ -1,0 +1,210 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin:0 ;
+  font-size: 1.3vw;
+  color: white;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* =============================================== */
+body header{
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  background-color: #7616C2;
+
+}
+
+header h1{
+  flex-basis: 20%;
+  margin-left: 1rem;
+  color: white;
+  align-self: center;
+}
+
+nav ul {
+  margin-left: 10vw;
+  padding: 1.5vh;
+  display: flex;
+  flex-direction: row;
+  gap: 10vw;
+  justify-content: space-around;
+}
+
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  position: relative;
+}
+
+.a{
+  display: grid;
+  width: 12vw;
+  height: 6vh;
+  border: none;
+  justify-content: center;
+  place-content: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 1.5vw;
+  background-color: #840be7;
+}
+
+nav ul li::after {
+  content: '';
+  position: absolute;
+  width: 80%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 10%;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav ul li:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.logo_kitek{
+  height: 12vh;
+  margin: .5rem;
+  margin-left: 1rem;
+  flex-basis: 3%;
+  border-radius: 1vw;
+}
+
+/* ================================================== */
+
+main{
+    display: flex;
+    flex-basis: 100%;   
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url('gradient.jpg');
+}
+
+.zdj{
+    display: flex;
+    flex-basis: 25%;
+    height: 31vh;
+    margin: .5rem;
+}
+
+
+/* ============================== */
+
+footer{
+    display: flex;
+    color: white;
+    background-color: #7616C2;
+    height:10vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* ======================================= */
+/* body {
+    background-color: #00c4ff;
+  }
+   */
+  .container {
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+  }
+  
+  #contactForm {
+
+    background-color: #7616C2;
+    padding: 1.3vw;
+    margin: 4vw 0;
+    margin-top: 9rem;
+    margin-bottom: 8.5rem;
+    border-radius: 1vw;
+
+  }
+  #contactForm p {
+    font-size: 2em;
+
+  }
+  #contactForm h2 {
+    margin-bottom: 0.4vw;
+    display: block;
+    font-size: 1.5em;
+    text-align: center;
+    color: white;
+  }
+  #contactForm input,
+  #contactForm textarea {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    border: 0.1vw solid #ccc;
+    background: rgb(194, 32, 235);
+    margin: 0.15vw;
+    padding: 0.5vw;
+    border-radius: 1vw;
+    font-size: 1em;
+  }
+  #contactForm input:hover,
+  #contactForm textarea:hover {
+    transition: border-color 0.3s ease-in-out;
+    border: 0.1vw solid #aaa;
+  }
+  #contactForm textarea {
+    height: 8vw;
+    resize: none;
+  }
+  #contactForm input[type=submit] {
+    cursor: pointer;
+
+    border: none;
+    background-color: #4e0b85;
+    padding: 0.5vw;
+    margin-top: 1vh;
+    border-radius: 1vw;
+    color: white;
+  }
+  #contactForm input:hover {
+    background: #09c;
+    transition: 0.3s ease-in-out;
+  }
+  #contactForm input:active {
+    box-shadow: inset 0 0.01vw 0.1vw rgba(0, 0, 0, 0.5);
+  }
+  #contactForm input:focus,
+  #contactForm textarea:focus {
+    outline: 0;
+    border: 0.1vw solid #ccc;
+  }
+ 
+
+#odpowiedź, .response{
+  font-size: 1.3vw;
+  text-align: center;
+  margin-top: 1rem;
+  /* border: 1px solid #999; */
+}
+
+#formResponse{
+  justify-content: center;
+  text-align: center;
+}
+
+#reg{
+  text-decoration: none;
+  font-style: italic;
+  font-size: 1.1vw;
+  text-align: center;
+
+}

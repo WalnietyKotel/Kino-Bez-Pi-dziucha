@@ -1,0 +1,285 @@
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: '8BIT WONDER', sans-serif;
+}
+
+html, body{
+    width: 100%;  height: 100%;
+    background-color: gold;
+    overflow: hidden;
+}
+
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: snow;
+}
+h3{
+    font-size: 2rem;
+    -webkit-text-stroke: 1px gold;
+}
+h1{
+    color: snow;
+}
+
+.navhome{
+    font-size: 2rem;
+    -webkit-text-stroke: 1px gold;
+}
+.navbar{
+    background-color: #271231;
+
+    min-height: 70px;    
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+    width: calc(100vw - 40px);
+
+    position: fixed;
+    
+    z-index: 20;
+}
+
+
+
+.navmenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    gap: 60px;
+}
+
+
+
+.navlink{
+    transition: .7s ease;
+}
+
+.navlink:hover{
+    color: aqua;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+   display: block;
+
+   width: 25px; 
+   height: 3px;
+   margin: 5px auto;
+
+   -webkit-transition: all .3s ease-in-out;
+   transition: all .3s ease-in-out;
+
+   background-color: white;
+}
+
+
+.pixelCon {
+    position: absolute;
+    width: 120%;  height: 120%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+  
+  .pixel {
+    background: white;
+    width: 10%;
+    padding-top: 10%;
+    float: left;
+    opacity: 0.0;
+    animation: blink 5s infinite;
+  }
+  
+  @keyframes blink {
+    0%    {opacity: 0.0;}
+    25%   {opacity: 0.0;}
+    50%   {opacity: 0.5;}
+    100%  {opacity: 0.0;}
+  }
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main *{
+    z-index: 10;
+}
+
+article{
+    background-color: snow;
+    height: 75%;
+
+    min-width: 584px;
+    width: 40%;
+    border: 10px outset rgb(255, 187, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 10%;
+    display: grid;
+    place-content: center;
+}
+
+h1{
+    font-size: 1.5vmax;
+}
+
+form{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input{
+    margin-block: 5vh 0;
+    height: 5%;
+    width: 50%;
+    transition: 1s linear;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+input:hover{
+    transition: 0s linear;
+    -webkit-box-shadow: 1px 1px 24px -5px rgba(200, 144, 10, 1);
+    -moz-box-shadow: 1px 1px 24px -5px rgba(200, 144, 10, 1);
+    box-shadow: 1px 1px 24px -5px rgba(200, 144, 10, 1);
+}
+
+input:active{
+    transition: .3s linear; 
+    -webkit-box-shadow: 1px 1px 24px 5px rgba(200, 144, 10, 1);
+    -moz-box-shadow: 1px 1px 24px 5px rgba(200, 144, 10, 1);
+    box-shadow: 1px 1px 24px 5px rgba(200, 144, 10, 1);
+}
+
+section{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    color: snow;
+    width: calc(100% - 55%);
+}
+
+p{
+        font-size: 2vw;
+}
+
+section > button > p{
+    font-size: 1rem
+}
+
+#regButton{
+    border-style: none;
+    background-color: #724caf;
+    padding: 1vh 2vw 1vh 2vw;
+
+    font-size: 2vw;
+}
+@media(max-width: 768px){
+
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navmenu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #271231;
+        width: 100%;
+        text-align: center;
+        transition: .3s;
+    }
+
+    .navitem{
+        margin: 16px 0;
+    }
+
+    .navmenu.active{
+        left: 0;
+    }
+
+    article{
+        height: 90%;
+        width: 75%;
+    }
+
+
+    p{
+        font-size: 2vw;
+    }
+
+    input{
+        font-size: 2.2vw;
+    }
+
+}
+
+h3{
+    font-size: 2rem;
+    -webkit-text-stroke: 1px gold;
+}
+
+
+@media(max-width: 768px){
+    article{
+        height: 90%;
+        width: 75%;
+    }
+
+    p{
+        font-size: 2vw;
+    }
+
+    input{
+        font-size: 2.2vw;
+    }
+}
+

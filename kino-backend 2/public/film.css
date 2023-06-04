@@ -1,0 +1,169 @@
+*{
+    font-size: 1.3vw;
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    background-image: url('gradient.jpg');
+    padding: 0;
+    margin:0 ;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0 ;
+    font-size: 1.3vw;
+    color: white;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* =============================================== */
+body header{
+    display: flex;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    background-color: #7616C2;
+
+}
+
+header h1{
+    flex-basis: 20%;
+    margin-left: 1rem;
+    color: white;
+    align-self: center;
+}
+
+nav ul {
+    margin-left: 10vw;
+    padding: 1.5vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+
+.a{
+    display: grid;
+    width: 12vw;
+    height: 6vh;
+    border: none;
+    justify-content: center;
+    place-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 1.5vw;
+    background-color: #840be7;
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.logo_kitek{
+    height: 12vh;
+
+    margin: .5rem;
+    margin-left: 1rem;
+    flex-basis: 3%;
+    border-radius: 1vw;
+}
+
+/* ================================================== */
+
+main{
+    display: flex;
+    flex-basis: 90%;   
+    flex-wrap: wrap;
+}
+
+h2{
+    flex-basis: 100%;
+    height: auto;
+    background-color: #8D29DB;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 2vw;
+    color: aliceblue;
+}
+
+.opis{
+    flex-basis: 84.8%;
+    background-color: #8D29DB;
+    padding: 2rem;
+    margin: 1vw;
+    border-radius: 1vw;
+    width: 100%;
+}
+
+.bilet{
+    flex-basis: 10%;
+    background-color: #8D29DB;
+    padding: 3.5vw;
+    margin: 1vw;
+    border-radius: 1vw;
+    text-align: left;
+    text-decoration: none;
+}
+
+aside{
+    display: flex;
+    justify-content:space-evenly;
+    width: 100%;
+
+}
+
+
+
+img{
+    border-radius: 1vw;
+    margin: 1vw;
+    height: 20vw;
+}
+iframe{
+    margin: 1vw;
+    height: 20vw;
+    width: 40vw;
+    border-radius: 1vw;
+}
+
+/* ============================== */
+
+footer{
+    display: flex;
+    background-color: #7616C2;
+    height:8vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* ====================================== */
+

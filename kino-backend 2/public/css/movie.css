@@ -1,0 +1,118 @@
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+
+*{
+    font-family: '8BIT WONDER', sans-serif;
+    color: snow;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url("https://i0.wp.com/niestatystyczny.pl/wp-content/uploads/2020/05/1984-rok.jpg?fit=840%2C472&ssl=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+main{
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+main {
+    padding-left: 5vmax;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #D75858;
+    height: 5%;
+    width: 10%;
+}
+
+i{
+    top: 50%;
+    transform: translateY(20%);
+}
+
+footer{
+
+    display: flex;
+    height: 15%;
+    width: 90%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.booking{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.booking *{
+    font-size: .5vmax;
+}
+
+button{
+    height: 30%;
+    width: 75%;
+    border: none;
+    background-color: #6FB164;
+}
+
+aside{
+    background-color: rgba(255, 250, 250, .1);
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.other{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.other p{
+    font-size: .45vmax;
+}
+
+h1{
+    font-size: 2vmax;
+}
+
+h2{
+    font-size: .7vmax;
+}
+
+.moviedesc{
+    width: 50%;
+    font-size: .5vmax;
+}
+
+.trailer{
+    font-size: .4vmax;
+}
+
+h3{
+    font-size: 2rem;
+    -webkit-text-stroke: 1px gold;
+}

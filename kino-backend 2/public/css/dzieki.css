@@ -1,0 +1,28 @@
+@import url('https://fonts.cdnfonts.com/css/8bit-wonder');
+
+*{
+    font-family: '8BIT WONDER', sans-serif;
+    color: snow;    
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3{
+    font-size: 2rem;
+    -webkit-text-stroke: 1px gold;
+}

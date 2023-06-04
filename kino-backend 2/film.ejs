@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona filmu: Iron man</title>
+    <link rel="stylesheet" href="..//film.css">
+</head>
+<body>
+<header>
+    <img src="..//kitek pokerface.png" alt="kitek logo" class="logo_kitek">
+    <h1>Kino Bez Piździucha</h1>
+    <nav>
+        <ul>
+            <li><a href="/" class="a">Repertuar</a></li>
+            <li><a href="/about_us" class="a">About Us</a></li>
+            <li><a style="text-align: center" href="/login" class="a">Login<br><%=session%></a></li>
+        </ul>
+    </nav>
+</header>
+
+        <aside>
+            <img src="../<%=filmy.img%>" alt="<%=filmy.title%>">
+            <img src="<%=filmy.imgScene%>" alt="<%=filmy.title%>">
+            <iframe src="<%=filmy.trailer%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </aside>
+
+    <main>
+        <h2><%=filmy.title%></h2>
+
+        <a href="/kup/:<%=filmy.title%>" class="bilet">Kup Bilet:<br>20zł</a>
+
+        <p class="opis"><%=filmy.desc%></p>
+
+    </main>
+
+    <footer>
+        <p>Kino Bez Piździucha</p>
+        <p>&copy;WalnietyKotel i Sticzx Coorporated</p>
+    </footer>
+</body>
+</html>
