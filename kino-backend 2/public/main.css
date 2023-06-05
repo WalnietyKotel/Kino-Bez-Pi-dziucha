@@ -22,14 +22,14 @@ body header{
 
 header h1{
     flex-basis: 20%;
-    margin-left: 1rem;
+    margin-left: 1.5vw;
     color: white;
     align-self: center;
 }
 
 nav ul {
     margin-left: 10vw;
-    padding: 1.5vh;
+    padding: 1vw;
     display: flex;
     flex-direction: row;
     gap: 10vw;
@@ -45,7 +45,7 @@ nav ul li{
 .a{
     display: grid;
     width: 12vw;
-    height: 6vh;
+    height: 3.2vw;
     border: none;
     justify-content: center;
     place-content: center;
@@ -74,9 +74,9 @@ nav ul li:hover::after {
 }
 
 .logo_kitek{
-    height: 12vh;
-    margin: .5rem;
-    margin-left: 1rem;
+    height: 6vw;
+    margin: 0.5vw;
+    margin-left: 0.5vw;
     flex-basis: 3%;
     border-radius: 1vw;
 }
@@ -165,11 +165,10 @@ main {
 /* ============================== */
 
 footer{
-    width: 100%;
     display: flex;
     color: white;
     background-color: #7616C2;
-    height:10vh;
+    height:8vw;
     align-items: center;
     justify-content: space-evenly;
 }

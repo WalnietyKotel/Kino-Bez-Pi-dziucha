@@ -2,27 +2,144 @@
 
 
 *{
-    font-family: '8BIT WONDER', sans-serif;
-    color: snow;    
+    box-sizing: border-box;
+    padding: 0;
+    margin:0 ;
+    font-size: 1.3vw;
+    color: white;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-body{
+/* =============================================== */
+body header{
+    display: flex;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    align-items: center;
+    background-color: #7616C2;
+
+}
+
+header h1{
+    flex-basis: 20%;
+    margin-left: 1.5vw;
+    color: white;
+    align-self: center;
+}
+
+nav ul {
+    margin-left: 10vw;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+}
+
+.a{
+    display: grid;
+    width: 12vw;
+    height: 3.2vw;
+    border: none;
+    justify-content: center;
+    place-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 1.5vw;
+    background-color: #840be7;
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.logo_kitek{
+    height: 6vw;
+    margin: 0.5vw;
+    margin-left: 0.5vw;
+    flex-basis: 3%;
+    border-radius: 1vw;
+}
+
+/* ================================================== */
+
+
+
+main{
+    width: 100%;
     padding: 0;
+    background-image: url("../gradient.jpg");
     margin: 0;
 }
 
-main{
-    height: 70%;
-    width: 95%;
+aside{
+height: 30vw;
+    width: 100%;
     padding: 2.5%;
-    background-color: rgb(30, 30, 30);
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
+}
+#submit:after{
+    content: '';
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 10%;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+#submit:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+#submit:hover{
+    cursor: pointer;
+}
+#submit{
+    width: 12vw;
+    height: 3.2vw;
+    border: none;
+    justify-content: center;
+    place-content: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 1.5vw;
+    background-color: #840be7;
 }
 
+section{
+    margin-left: 8vw;
+    padding-bottom: 2vw;
+}
 .row:nth-child(n + 2){
     margin-top: 1vmax;
 }
@@ -65,43 +182,18 @@ main{
 .seat:hover{
     cursor: pointer;
 }
-
-.screen{
-    width: 90%;
-    height: 10%;
-    background-color: snow;
-    margin-top: 4vmax;
-    -webkit-box-shadow: 0px -4px 11px 1px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0px -4px 11px 1px rgba(255, 255, 255, 1);
-    box-shadow: 0px -4px 11px 1px rgba(255, 255, 255, 1);
-}
+/* ============================== */
 
 footer{
-    background-color: rgb(40, 40, 40);
-    height: 30%;
-    width: 100%;
     display: flex;
-    justify-content: space-around;
+    color: white;
+    background-color: #7616C2;
+    height:8vw;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-button{
-    height: 2rem;
-    width: auto;
-    border: none;
-    background-color: #6FB164;
-    font-size: .5vmax;
-}
 
-button:hover{
-    cursor: pointer;
-}
+/* ====================================== */
 
-p{
-    font-size: 1vmax;
-}
 
-h3{
-    font-size: 2rem;
-    -webkit-text-stroke: 1px gold;
-}

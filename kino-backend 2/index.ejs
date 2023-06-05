@@ -102,7 +102,7 @@
                     </button>
                     <div class="slider">
                         <%filmy.forEach((filmy)=>{%>
-                        <img alt="<%=filmy.title%>" src="<%=filmy.img%>" class="img" onclick="window.location.href='/film/:<%=filmy.title%>'">
+                        <img alt="<%=filmy.title%>" src="<%=filmy.img%>" class="img" onclick="window.location.href='/film/:<%=filmy._id%>'">
 
                         <%})%>
                     </div>

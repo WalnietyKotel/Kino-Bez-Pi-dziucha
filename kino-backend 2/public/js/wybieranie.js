@@ -1,5 +1,6 @@
 // wybieranie.js
 let nrOfSeats = 0;
+let pric = document.getElementById("price").textContent;
 
 const input = document.querySelector('#input');
 const priceElem = document.querySelector('#price')
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       // Calculate the price
-      const price = nrOfSeats * 10;
+      const price = nrOfSeats * pric;
 
       priceElem.value = price;
 

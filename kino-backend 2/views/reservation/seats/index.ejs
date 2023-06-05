@@ -10,7 +10,19 @@
     <script src="/js/wybieranie.js" defer></script>
 </head>
 <body>
-    <main>
+<header>
+    <img src="/kitek pokerface.png" alt="kitek logo" class="logo_kitek">
+    <h1>Kino Bez Piździucha</h1>
+    <nav>
+        <ul>
+            <li><a href="/" class="a">Repertuar</a></li>
+            <li><a href="/about_us" class="a">About Us</a></li>
+            <li><a style="text-align: center" href="/login" class="a">Login<br><%=session%></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <aside>
 
         <div id="takenList" style="display: none">
             <%=takenSeats%>
@@ -18,25 +30,31 @@
 
         <div class="screen"></div>
 
-        <% for(var i=1; i*10 < totalSeats; i++) {%>
+        <% for(var i=1; i*10 <= totalSeats; i++) {%>
             <%-include(`row.ejs`, {number: i})%>
          <% } %>
 
          <%if(totalSeats%10 != 0){%>
             <%-include(`last.ejs`, {number : totalSeats})%>
         <%}%>
-        
 
-    </main>
-    <footer>
+<div id="price" style="display: none"><%=price%></div>
+
+    </aside>
+<section>
         <p>KOSZT BILETOW WYNOSI AKTUALNIE: $<span id="Price">0</span></p>
         <form action="seat/final" method="POST">
             <input id="input" type="text" step="1" min="1" max="<%-totalSeats%>" name="seat" style="display: none;">
             <input id="price" type="text" name="price" style="display: none;">
             <input type="text" name="seanse" value="<%-seanse%>" style="display: none;">
             <br>
-            <button>BOOK</button>
+            <input id="submit" type="submit" value="Kup">
         </form>
-    </footer>
+</section>
+</main>
+<footer>
+    <p>Kino Bez Piździucha</p>
+    <p>&copy; WalnietyKotel i Sticzx Coorporated</p>
+</footer>
 </body>
 </html>

@@ -5,10 +5,11 @@ const indexRouter = require('./routes/index')
 const loginRouter = require('./routes/login')
 const about_usRouter = require('./routes/about_us')
 const registerRouter = require('./routes/register')
+
+const filmy = require('./models/filmy')
 const body = require('body-parser')
 const {
     dbSetup,
-
     Cinema,
     add,
     emailValidation,
@@ -16,7 +17,8 @@ const {
     Seanse,
     Reservation
 } = require('./private_modules/db.js');
-const mail = require('node-mailer')
+
+const mail = require('./private_modules/mail')
 const mongoose = require('mongoose')
 const connect = require('./dbs/filmy')
 const connectDB = require('./dbs/filmyDB')
@@ -44,6 +46,7 @@ app.use('/login', loginRouter)
 app.use('/about_us', about_usRouter)
 app.use('/register', registerRouter)
 app.use('/kup',kupRouter)
+app.set('view engine','ejs')
 
 /////////////////////////////////////////////////////////////////
 
@@ -77,18 +80,18 @@ app.use('/kup',kupRouter)
             }
         })
     })
-app.post(`/reservation`, (req, res) => {
+app.get(`/reservation/:_id`, (req, res) => {
     res.status(200);
     //query - movie
-    const q = filmy.findOne({_id: req.body.id}).exec();
+    const q = filmy.findOne({_id: req.params._id.substring(1)}).exec();
     q.then((doc_q)=>{
 
         //query - all seanses with the movie
-        const qu = Seanse.find({ movie: req.body.id })
+        const qu = Seanse.find({ movie: req.params._id.substring(1) })
         qu.then((doc_qu)=>{
 
             //query - all cinemas with the movie
-            const que = Cinema.find({ movies: { $in: req.body.id } }).exec();
+            const que = Cinema.find({ movies: { $in: req.params._id.substring(1) } }).exec();
             que.then((doc_que)=>{
 
                 let arrSea = [];
@@ -108,7 +111,7 @@ app.post(`/reservation`, (req, res) => {
     })
 })
 
-app.post(`/reservation/seat`, (req, res) => {
+app.get(`/reservation/seat/:_id`, (req, res) => {
     //in case user is not logged in
     console.log(req.session.name);
     console.log(req.session.email);
@@ -116,31 +119,35 @@ app.post(`/reservation/seat`, (req, res) => {
         res.redirect(`/login`);
     }
     //query - the specified seanse
-    const q = Seanse.findById(req.body.seanse).exec();
+    const q = Seanse.findOne({_id:req.params._id.substring(1)}).exec();
     q.then((doc)=>{
+        const f = filmy.findOne({_id:doc.movie}).exec();
+        f.then((f)=>{
         //query - the cinema hosting the seanse
-        const qu = Cinema.findById(doc.cinema).exec();
+        const qu = Cinema.findOne({_id: doc.cinema}).exec();
         qu.then((docCin)=>{
-
+console.log(docCin)
             //query - any existing reservations for seanse
-            const que = Reservation.find({seanse: req.body.seanse}).exec();
+            const que = Reservation.find({seanse: req.params._id.substring(1)}).exec();
             que.then((docRes)=>{
 
                 const resSt = new Array; //convenience array
                 docRes.forEach(element => {
                     resSt.push(element.seat); //getting every reservation's seat into resSt
                 })
-
-                res.render(`./reservation/seats/index.ejs`, {totalSeats: docCin.seats, takenSeats : resSt, seanse: doc._id});
+console.log(docCin.seats)
+                console.log(resSt)
+                console.log(doc._id)
+                res.render(`reservation/seats/index.ejs`, {session:req.session.name, totalSeats: docCin.seats, takenSeats : resSt, seanse: doc._id, price:f.price});
+            })
             })
         })
     })
 })
 
-app.post(`/reservation/seat/final`, (req, res) => {
+app.post(`/reservation/seat/:_id/final`, (req, res) => {
     //in case user is not logged in - as if, right?
     if(req.session.name == undefined || req.session.email == undefined){
-        res.status(401);
         res.redirect(`/login`);
     }
     //query - find the matching user - note to self: fuck
@@ -168,12 +175,12 @@ app.post(`/reservation/seat/final`, (req, res) => {
 
                 bookArr.sort((a, b) => a - b);
 
-                mail.mailOptions.text = `You have purchased ticket(s) for ${doc_que.name} for the price of ${req.body.price}$. Your seat number(s) are: ${bookArr.toString()}`;
+                mail.mailOptions.text = `Zakupiono bilet(y) na ${doc_que.title}. Twoje miejsca to: ${bookArr.toString()}`;
                 mail.mailOptions.to = req.session.email;
                 mail.sendMail();
 
-                console.log(doc_que.name);
-                res.render(`./reservation/final/index.ejs`, {movie: doc_que.name});
+                console.log(doc_que.title);
+                res.render(`./reservation/final/index.ejs`, {session:req.session.name,movie: doc_que.title});
             })
         })
     })

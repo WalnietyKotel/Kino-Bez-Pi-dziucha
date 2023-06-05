@@ -22,6 +22,18 @@ body{
     box-sizing: border-box;
 }
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0 ;
+    font-size: 1.3vw;
+    color: white;
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 /* =============================================== */
 body header{
     display: flex;
@@ -34,14 +46,14 @@ body header{
 
 header h1{
     flex-basis: 20%;
-    margin-left: 1rem;
+    margin-left: 1.5vw;
     color: white;
     align-self: center;
 }
 
 nav ul {
     margin-left: 10vw;
-    padding: 1.5vh;
+    padding: 1vw;
     display: flex;
     flex-direction: row;
     gap: 10vw;
@@ -57,7 +69,7 @@ nav ul li{
 .a{
     display: grid;
     width: 12vw;
-    height: 6vh;
+    height: 3.2vw;
     border: none;
     justify-content: center;
     place-content: center;
@@ -86,52 +98,38 @@ nav ul li:hover::after {
 }
 
 .logo_kitek{
-    height: 12vh;
-
-    margin: .5rem;
-    margin-left: 1rem;
+    height: 6vw;
+    margin: 0.5vw;
+    margin-left: 0.5vw;
     flex-basis: 3%;
     border-radius: 1vw;
 }
 
 /* ================================================== */
 
-main{
-    display: flex;
-    flex-basis: 90%;   
-    flex-wrap: wrap;
-}
+
 
 h2{
     flex-basis: 100%;
     height: auto;
     background-color: #8D29DB;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 15px;
+    padding: 1vw;
+    margin: 1vw;
+    border-radius: 1vw;
     text-align: center;
     font-size: 2vw;
     color: aliceblue;
 }
 
 .opis{
-    flex-basis: 84.8%;
     background-color: #8D29DB;
-    padding: 2rem;
+    padding: 1vw;
     margin: 1vw;
     border-radius: 1vw;
-    width: 100%;
+    flex-basis: 100%;
 }
 
-.bilet{
-    flex-basis: 10%;
-    background-color: #8D29DB;
-    padding: 3.5vw;
-    margin: 1vw;
-    border-radius: 1vw;
-    text-align: left;
-    text-decoration: none;
-}
+
 
 aside{
     display: flex;
@@ -140,7 +138,13 @@ aside{
 
 }
 
+#img{
+    width: 14vw;
+}
 
+#imgScene{
+    width: 42vw;
+}
 
 img{
     border-radius: 1vw;
@@ -150,7 +154,22 @@ img{
 iframe{
     margin: 1vw;
     height: 20vw;
-    width: 40vw;
+    width: 38vw;
+    border-radius: 1vw;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ul{
+    flex-basis: 10%;
+    margin: 1vw;
+    margin-top: 0;
+    list-style: none;
+    background-color: #8D29DB;
+    padding: 1vw;
     border-radius: 1vw;
 }
 
@@ -158,8 +177,9 @@ iframe{
 
 footer{
     display: flex;
+    color: white;
     background-color: #7616C2;
-    height:8vh;
+    height:8vw;
     align-items: center;
     justify-content: space-evenly;
 }
