@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 const mailOptions = {
     from: 'lemo.cam.sender@gmail.com', // sender address
     to: 'lemo.cam.channel@gmail.com', // list of receivers
-    subject: '8Bit Cinema - Booking Confirmation', // Subject line
+    subject: 'Kino Bez Piździucha - rezerwacja', // Subject line
     text: 'SEAT BOOKED', // plain text body
 };
   

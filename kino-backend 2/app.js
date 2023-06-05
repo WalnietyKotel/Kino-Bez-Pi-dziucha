@@ -192,7 +192,7 @@ app.post(`/reservation/seat/:_id/final`, (req, res) => {
 /////////////////////////////////////////////////////////////////
 
 app.all('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'404.ejs'))
+    res.render('404.ejs',{session:req.session.name})
 })
 
 connectDB().then(()=>{app.listen(5000, () => {console.log("Server listening on port 5000")})})
